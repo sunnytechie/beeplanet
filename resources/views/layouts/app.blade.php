@@ -35,7 +35,7 @@
     <link href="{{ asset('assets/css/jquery.fancybox.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('asset/css/customstyle.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/customstyle.css') }}" rel="stylesheet">
 </head>
 <body>
     <!-- start page-wrapper -->

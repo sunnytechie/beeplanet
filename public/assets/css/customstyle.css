@@ -1,6 +1,6 @@
 @media screen and (min-width: 992px)
 {
     .header-style-1 .navigation > .container-fluid, .header-style-4 .navigation > .container-fluid {
-        min-height: 70px;
+        min-height: 70px !important;
     }
 }
