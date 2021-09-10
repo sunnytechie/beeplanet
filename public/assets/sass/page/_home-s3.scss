@@ -1,0 +1,232 @@
+/*--------------------------------------------------------------
+	#home-s3
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#3.1	top-products-section
+--------------------------------------------------------------*/
+.top-products-section {
+	padding-top: 0;
+
+	.grid .img-holder {
+		width: 690px;
+		float: left;
+
+		@include media-query(1199px) {
+			width: 50%;
+		}
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	.grid .details {
+		width: calc(100% - 690px);
+		float: left;
+		padding-left: 85px;
+		padding-top: 90px;
+
+		@include media-query(1450px) {
+			padding-top: 45px;
+			padding-left: 45px;
+		}
+
+		@include media-query(1199px) {
+			width: 50%;
+			padding: 0 0 0 35px;
+		}
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+			padding: 45px 0 0;
+		}
+		
+		h2 {
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+			margin: 0 0 0.4em;
+
+			@include media-query(1199px) {
+				font-size: 35px;
+				font-size: calc-rem-value(35);
+			}
+
+			@include media-query(991px) {
+				font-size: 30px;
+				font-size: calc-rem-value(30);
+			}
+		}
+
+		p {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			margin: 0;
+		}
+	}
+
+	.price {
+		font-size: 36px;
+		font-size: calc-rem-value(36);
+		margin: 0.6em 0 1em;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		.old {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			font-weight: normal;
+			color: lighten($text-color, 20%);
+			text-decoration: line-through;
+			display: inline-block;
+			margin-left: 5px;
+
+			@include media-query(991px) {
+				font-size: 18px;
+				font-size: calc-rem-value(18);
+			}
+		}
+	}
+
+	.action {
+		overflow: hidden;
+
+		> div {
+			float: left;
+			margin-right: 5px;
+		}
+
+		> div a:not(.theme-btn) {
+			width: 49px;
+			height: 49px;
+			line-height: 49px;
+			text-align: center;
+			font-size: 22px;
+			color: $black;
+			border: 1px solid $black;
+			display: inline-block;
+		}
+	}
+
+
+	/*** owl controls ***/
+	.owl-controls {
+		width: calc(100% - 690px);
+		float: right;
+		padding-left: 85px;
+		text-align: left;
+		position: absolute;
+		right: 0;
+		bottom: 100px;
+
+		@include media-query(1450px) {
+			padding-left: 45px;
+			bottom: 60px;
+		}
+
+		@include media-query(1199px) {
+			padding-left: 35px;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			position: static;
+			margin-top: 45px;
+		}
+
+		@include media-query(991px) {
+			text-align: left;
+			padding-left: 0;
+		}
+	}
+
+	.owl-theme .owl-dots span,
+	.owl-theme .owl-dots .owl-dot.active span {
+		background: transparent;
+		height: 24px;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 500;
+		color: $heading-color;
+		padding: 0;
+		margin: 0 15px 0 0;
+		display: inline-block;
+	}
+
+	.owl-theme .owl-dots .owl-dot.active span {
+		font-weight: 600;
+	}
+
+	.owl-theme .owl-dots .owl-dot span {
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 10px;
+			height: 1px;
+			background: $black;
+			position: absolute;
+			left: 27px;
+			top: 10px;
+			opacity: 0;
+			@include transition-time(0.3s);
+		}
+	}
+
+	.owl-theme .owl-dots .owl-dot.active span:before {
+		width: 40px;
+		opacity: 1;
+	}
+
+	.owl-theme .owl-dots .owl-dot:hover span {
+		background: transparent;
+	}
+
+	.owl-theme .owl-dots .owl-dot {
+		margin-right: 15px;
+		@include transition-time(0.3s);
+	}
+
+	.owl-theme .owl-dots .owl-dot.active {
+		margin-right: 55px;
+	}	
+}
+
+.feautured-product-s4-section {
+	@extend .feautured-product-s3-section;
+	padding-bottom: 110px;
+
+	@include media-query(991px) {
+		padding-bottom: 100px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 90px;
+	}
+}
+
+.home-feature-section-s2 {
+	background: transparent;
+}
+
+.featured-proeducts-section-s3 {
+	@extend .featured-proeducts-section-s2;
+	padding-bottom: 0;
+
+	@include widther(1200px) {
+		.product-grids > .grid:first-child,
+		.product-grids > .grid:last-child {
+			margin-top: 0;
+		}
+	}
+
+	.product-grids > .grid:nth-child(2) {
+		.details {
+			bottom: 20px;
+			left: 20px;
+		}
+	}
+}
