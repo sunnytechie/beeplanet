@@ -25,4 +25,35 @@ class HomeController extends Controller
     {
         return view('pages.index');
     }
+
+    public function blog()
+    {
+        return view('pages.blog');
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+
+    public function about()
+    {
+        return view('pages.about');
+    }
+
+    public function wishlist()
+    {
+        return view('pages.wishlist');
+    }
+
+    public function shop()
+    {
+        return view('pages.shop');
+    }
+
+    public function account()
+    {
+        return view('pages.profile');
+    }
+    
 }

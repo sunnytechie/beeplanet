@@ -2,7 +2,7 @@
 <header id="header" class="site-header header-style-1">
     <div class="topbar">
         <div class="topbar-text">
-            <p>Join our showroom and get 25 % off ! Coupon code : Bangbang45</p>
+            <p>Join our showroom and get 25 % off ! this Black Friday</p>
         </div>
     </div> <!-- end topbar -->
 
@@ -54,10 +54,12 @@
                 <ul class="nav navbar-nav">
                     <li class="current-menu-parent">
                         <a href="/">Home</a>
-                       
                     </li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="menu-item-has-children has-mega-menu">
+                    <li><a href="{{ route('about') }}">About</a></li>
+                    <li><a href="{{ route('shop') }}">Shop</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
+                    {{-- <li class="menu-item-has-children has-mega-menu">
                         <a href="#">Shop</a>
                         <ul class="mega-menu">
                             <li>
@@ -104,63 +106,59 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
-                    <li class="menu-item-has-children">
+                    </li> --}}
+
+                    {{-- <li class="menu-item-has-children">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
                             <li><a href="404.html">404</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
-                    </li>
-                    <li class="menu-item-has-children">
+                    </li> --}}
+                    {{-- <li class="menu-item-has-children">
                         <a href="#">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="blog-masonary.html">Blog masonry</a></li>
                             <li><a href="blog-single.html">Blog single</a></li>
                         </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    </li> --}}
+
                 </ul>
             </div><!-- end of nav-collapse -->
             <div class="header-right">
                 <div class="my-account-link">
-                    <a href="my-account.html"><i class="icon-user"></i></a>
+                    {{-- User details --}}
+                    <a href="{{ route('account') }}"><i class="icon-user"></i></a>
                 </div>
                 <div class="wishlist-box">
-                    <a href="#"><i class="icon-heart-shape-outline"></i></a>
+                    {{-- Liked product or item --}}
+                    <a href="{{ route('wishlist') }}"><i class="icon-heart-shape-outline"></i></a>
                 </div>
                 <div class="mini-cart">
-                    <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <span class="cart-count">3</span></button>
+                    <button class="cart-toggle-btn"><i class="fa fa-bell-o" style="font-size:20px"></i> <i class="bi bi-bell"></i><span class="cart-count">3</span></button>
+
+                    {{-- <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <i class="bi bi-bell"></i><span class="cart-count">3</span></button> --}}
                     <div class="mini-cart-content">
                         <div class="mini-cart-items">
                             <div class="mini-cart-item clearfix">
-                                <div class="mini-cart-item-image">
-                                    <a href="#"><img src="assets/images/shop/mini-cart/img-1.jpg" alt></a>
-                                </div>
-                                <div class="mini-cart-item-des">
-                                    <a href="#">Elegant skirt</a>
-                                    <span class="mini-cart-item-quantity">Qty: 1</span>
-                                    <span class="mini-cart-item-price">$20.15</span>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis, necessitatibus adipisci a similique fugiat magni minima nostrum consequuntur?</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mini-cart-item clearfix">
-                                <div class="mini-cart-item-image">
-                                    <a href="#"><img src="assets/images/shop/mini-cart/img-2.jpg" alt></a>
-                                </div>
-                                <div class="mini-cart-item-des">
-                                    <a href="#">Beautiful tops</a>
-                                    <span class="mini-cart-item-quantity">Qty: 1</span>
-                                    <span class="mini-cart-item-price">$13.25</span>
-                                </div>
-                            </div>
+                            
                         </div>
-                        <div class="mini-cart-action clearfix">
+
+                        {{-- <div class="mini-cart-action clearfix">
                             <span class="mini-checkout-price">Subtotal: $215.14</span>
                             <a href="#" class="view-cart-btn">View Cart</a>
                             <a href="#" class="checkout-btn">Checkout</a>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
             </div>
