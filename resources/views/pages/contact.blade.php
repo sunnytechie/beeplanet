@@ -3,16 +3,16 @@
 @section('content')
 
             <!-- start page-title -->
-            <section class="page-title">
+            <section class="page-title" style="background-image: url('{{ asset('assets/images/bee/bg3.jpg') }}')">
                 <div class="page-title-container">
                     <div class="page-title-wrapper">
                         <div class="container">
                             <div class="row">
                                 <div class="col col-xs-12">
-                                    <h2>Contact</h2>
+                                    <h2 style="color: #fff">Contact</h2>
                                     <ol class="breadcrumb">
-                                        <li><a href="/">Home</a></li>
-                                        <li>Contact</li>
+                                        <li><a style="color: #ddd" href="/">Home</a></li>
+                                        <li style="color: #fff">Contact</li>
                                     </ol>
                                 </div>
                             </div> <!-- end row -->

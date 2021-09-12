@@ -114,6 +114,7 @@
                                 <li><a href="#">Privacy </a></li>
                                 <li><a href="#">Terms</a></li>
                                 <li><a href="#">Promo T&amp;Cs Apply</a></li>
+                                <li><a href="#">Admin</a></li>
                             </ul>
                         </div>
                     </div>

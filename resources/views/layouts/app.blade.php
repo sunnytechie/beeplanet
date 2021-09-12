@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Bee Planet.</title>
+    <title>Bee Smart Planet.</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -61,13 +61,13 @@
             @yield('content')
         </section>
 
-
+        {{-- WhatsApp --}}
+        <div class="elfsight-app-e109bde9-2362-45a7-bd91-8cd86cff1f6d"></div>
 
         @include('sniffets.footer')
 
         @include('sniffets.popup')
     </div>
-
 
     <!-- All JavaScript files
     ================================================== -->
@@ -79,5 +79,8 @@
 
     <!-- Custom script for this template -->
     <script src="{{ asset('assets/js/script.js') }}"></script>
+
+    {{-- WhatsApp --}}
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>

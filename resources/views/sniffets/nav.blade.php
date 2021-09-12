@@ -15,7 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="assets/images/logo.png" alt></a>
+                <a class="navbar-brand" href="/"><img src="{{ asset('assets/images/bee/beelogo.png') }}" alt></a>
             </div>
             <div class="header-left">
                 <div class="side-info-bars">
@@ -26,7 +26,7 @@
                 <div class="side-info-content">
                     <button class="btn side-info-close-btn"><i class="ti-close"></i></button>
                     <div class="logo">
-                        <img src="assets/images/slidbar-logo.png" alt>
+                        <img src="{{ asset('assets/images/bee/beelogo.png') }}" alt>
                     </div>
                     <div class="text">
                         <p>Covered the whole of her lower arm towards the viewer gregor then turned to look out the window</p>
