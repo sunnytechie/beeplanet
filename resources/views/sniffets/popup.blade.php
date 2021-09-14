@@ -5,14 +5,16 @@
                 <div class="newsletter-popup-ineer">
                     <button class="btn newsletter-close-btn"><i class="pe-7s-close-circle"></i></button>
                     <div class="img-holder">
-                        <img src="assets/images/newsletter.jpg" alt>
+                        <img src="{{ asset('assets/images/bee/popupbg.jpg') }}" alt>
                     </div>
                     <div class="details">
                         <h4>Get 25% discount shipped to your inbox</h4>
                         <p>Subscribe to our newsletter to receive timely updates to your favorite products</p>
-                        <form>
+                        <form method="post" action="{{ route('store.email') }}">    
+                            @csrf
+                            
                             <div>
-                                <input type="email" placeholder="Enter your email" />
+                                <input type="email" name="email" placeholder="Enter your email" required />
                                 <button type="submit">Subscribe</button>
                             </div>
                             <div>
