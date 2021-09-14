@@ -30,7 +30,8 @@
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                               <a class="nav-item nav-link active" id="nav-add-item" data-toggle="tab" href="#item-new" role="tab" aria-controls="item-new" aria-selected="true">Add New Product</a>
                               <a class="nav-item nav-link" id="nav-item-tab" data-toggle="tab" href="#nav-item" role="tab" aria-controls="nav-item" aria-selected="false">All Product</a>
-                              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Subscribers List</a>
+                              <a class="nav-item nav-link" id="nav-subscribers-tab" data-toggle="tab" href="#nav-subscribers" role="tab" aria-controls="nav-subscribers" aria-selected="false">Subscribers List</a>
+                              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact List</a>
                             </div>
                           </nav>
 
@@ -190,11 +191,11 @@
                                 </table>
                             </div>
 
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="tab-pane fade" id="nav-subscribers" role="tabpanel" aria-labelledby="nav-subscribers-tab">
                                 <table class="table table-light">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th>Emails</th>
+                                            <th>Emails</th> 
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -203,7 +204,31 @@
                                             <td>{{ $email->email }}</td>
                                         </tr>   
                                         @endforeach
-                                        
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <table class="table table-light">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Emails</th>
+                                            <th>Subject</th>
+                                            <th>Complaints</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($contacts as $contact)
+                                         <tr>
+                                            <td>{{ $contact->name }}</td>
+                                            <td>{{ $contact->email }}</td>
+                                            <td>{{ $contact->subject }}</td>
+                                            <td>{{ $contact->complaint }}</td>
+                                        </tr>   
+                                        @endforeach
+                                                                              
                                     </tbody>
                                 </table>
                             </div>

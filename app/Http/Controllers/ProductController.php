@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
 use App\Models\Subscriber;
+use App\Models\Contact;
 
 class ProductController extends Controller
 {
@@ -21,8 +22,10 @@ class ProductController extends Controller
         $products = Product::orderBy('id', 'DESC')->get();
         //Subscribers
         $emails = Subscriber::orderBy('id', 'DESC')->get();
+        //Contacts
+        $contacts = Contact::orderBy('id', 'DESC')->get();
 
-        return view('admin.product.index', compact('products', 'emails'));
+        return view('admin.product.index', compact('products', 'emails', 'contacts'));
     }
 
     public function show() {
