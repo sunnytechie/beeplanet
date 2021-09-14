@@ -176,22 +176,22 @@
                                         <ul class="product-categories">
                                             
                                             <li class="cat-item">
-                                                <a href="{{ route('shop.show', 1) }}">Smart Switches.</a>
+                                                <a href="{{ route('category1.show') }}">Smart Switches.</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="{{ route('shop.show', 2) }}">Cameras</a>
+                                                <a href="{{ route('category2.show') }}">Cameras</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smartlocks</a>
+                                                <a href="{{ route('category3.show') }}">Smartlocks</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart Sockets</a>
+                                                <a href="{{ route('category4.show') }}">Smart Sockets</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart bolds</a>
+                                                <a href="{{ route('category5.show') }}">Smart bolds</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart remote controls</a>
+                                                <a href="{{ route('category6.show') }}">Smart remote controls</a>
                                             </li>
                                             <li class="cat-item">
                                                 <a href="#">Uncategorized</a>
@@ -199,10 +199,6 @@
 
                                         </ul>
                                     </div>
-    
-                                    
-    
-                                   
                                 </div>
                             </div>
                         </div>

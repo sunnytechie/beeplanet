@@ -1,10 +1,10 @@
-<!-- start best-seller-section -->
-<section class="best-seller-section section-padding">
+<!-- start trendy-product-section -->
+<section class="trendy-product-section section-padding">
     <div class="container-1410">
         <div class="row">
             <div class="col col-xs-12">
                 <div class="section-title-s2">
-                    <h2>Best seller</h2>
+                    <h2>Recent products</h2>
                 </div>
                 <a href="#" class="more-products">More products</a>
             </div>
@@ -13,7 +13,8 @@
             <div class="col col-xs-12">
                 <div class="products-wrapper">
                     <ul class="products product-row-slider">
-                        @foreach ($productBests as $product)
+
+                        @foreach ($productRecents as $product)
                         <li class="product">
                             <div class="product-holder">
                                 <div class="product-badge discount">{{ $product->badge }}</div>
@@ -93,4 +94,4 @@
         </div>
     </div> <!-- end container-1410 -->
 </section>
-<!-- end best-seller-section -->
+<!-- end trendy-product-section -->

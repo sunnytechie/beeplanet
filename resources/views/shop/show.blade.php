@@ -176,22 +176,22 @@
                                         <ul class="product-categories">
                                             
                                             <li class="cat-item">
-                                                <a href="{{ route('shop.show', 1) }}">Smart Switches.</a>
+                                                <a href="/shop/1/show">Smart Switches.</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="{{ route('shop.show', 2) }}">Cameras</a>
+                                                <a href="/shop/2/show">Cameras</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smartlocks</a>
+                                                <a href="/shop/3/show">Smartlocks</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart Sockets</a>
+                                                <a href="4">Smart Sockets</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart bolds</a>
+                                                <a href="5">Smart bolds</a>
                                             </li>
                                             <li class="cat-item">
-                                                <a href="#">Smart remote controls</a>
+                                                <a href="6">Smart remote controls</a>
                                             </li>
                                             <li class="cat-item">
                                                 <a href="#">Uncategorized</a>
@@ -199,10 +199,6 @@
 
                                         </ul>
                                     </div>
-    
-                                    
-    
-                                   
                                 </div>
                             </div>
                         </div>

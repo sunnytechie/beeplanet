@@ -55,9 +55,10 @@
                     <li class="current-menu-parent">
                         <a href="/">Home</a>
                     </li>
-                    <li><a href="{{ route('about') }}">About</a></li>
+                    
                     <li><a href="{{ route('shop') }}">Shop</a></li>
-                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    {{-- <li><a href="{{ route('blog') }}">Blog</a></li> --}}
+                    <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                     {{-- <li class="menu-item-has-children has-mega-menu">
                         <a href="#">Shop</a>
@@ -137,7 +138,7 @@
                     <a href="{{ route('wishlist') }}"><i class="icon-heart-shape-outline"></i></a>
                 </div>
                 <div class="mini-cart">
-                    <button class="cart-toggle-btn"><i class="fa fa-bell-o" style="font-size:20px"></i> <i class="bi bi-bell"></i><span class="cart-count">3</span></button>
+                    <button class="cart-toggle-btn"><i class="fa fa-bell-o" style="font-size:20px"></i> <i class="bi bi-bell"></i><span class="cart-count">.</span></button>
 
                     {{-- <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <i class="bi bi-bell"></i><span class="cart-count">3</span></button> --}}
                     <div class="mini-cart-content">
@@ -145,8 +146,8 @@
                             <div class="mini-cart-item clearfix">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nobis, necessitatibus adipisci a similique fugiat magni minima nostrum consequuntur?</p>
+                                        <h5 class="card-title">Notification!!!  </h5>
+                                        <p class="card-text">Welcome to BeeSmartPlanet, We will send you notications in this space!</p>
                                     </div>
                                 </div>
                             </div>

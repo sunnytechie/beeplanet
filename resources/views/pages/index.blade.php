@@ -7,7 +7,7 @@
         @include('sniffets.display')
 
 
-        @include('sniffets.trendy')
+        @include('sniffets.recent')
 
 
         @include('sniffets.category')            

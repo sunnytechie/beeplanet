@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
+use App\Models\Subscriber;
 
 class HomeController extends Controller
 {
@@ -23,7 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $products = Product::orderBy('id', 'DESC')->get();
+        //best seller
+        $productBests = Product::where('category', 1)->orderBy('id', 'DESC')->get();
+        //Recent seller
+        $productRecents = Product::where('category', 2)->orderBy('id', 'DESC')->get();
+
+        return view('pages.index', compact('productBests', 'productRecents', 'products'));
     }
 
     public function blog()
@@ -48,7 +57,10 @@ class HomeController extends Controller
 
     public function shop()
     {
-        return view('pages.shop');
+        $products = Product::orderBy('id', 'DESC')
+                                    ->paginate(12);
+
+        return view('pages.shop', compact('products'));
     }
 
     public function account()
@@ -56,4 +68,7 @@ class HomeController extends Controller
         return view('pages.profile');
     }
     
+    public function error() {
+        return view('pages.404');
+    }
 }

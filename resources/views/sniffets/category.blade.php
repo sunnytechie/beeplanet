@@ -4,25 +4,56 @@
         <div class="row">
             <div class="col col-xs-12">
                 <div class="section-title-s3">
-                    <h2>Azedw Categories</h2>
+                    <h2>BeeSmartPlanet Categories</h2>
                     <p>Our campaigns, the latest trends and new collections</p>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col col-xs-12">
-                <div class="all-cat">
-                    <ul class="clearfix">
-                        <li><a href="#"><i class="fi flaticon-jacket-1"></i> <span>Jakets</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-jacket-2"></i> <span>Coats</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-pants"></i> <span>Trousers</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-dress"></i> <span>Tops</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-polo-shirt"></i> <span>T-shirts</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-dress-1"></i> <span>Skirts</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-bride-dress"></i> <span>Bridals</span></a></li>
-                        <li><a href="#"><i class="fi flaticon-coat"></i> <span>Swetters</span></a></li>
-                    </ul>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <div class="categories p-3">
+                        <a href="{{ route('category1.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-toggle-on" style="font-size:40px"></i> </div>
+                            <div><span>Smart Switches.</span></div>
+                        </a>
+                    </div>
+
+                    <div class="categories p-3">
+                        <a href="{{ route('category2.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-camera" style="font-size:40px"></i> </div>
+                            <div><span>Cameras</span></div>
+                        </a>
+                    </div>
+
+                    <div class="categories p-3">
+                        <a href="{{ route('category3.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-toggle-off" style="font-size:40px"></i> </div>
+                            <div><span>Smart Locks</span></div>
+                        </a>
+                    </div>
+
+                    <div class="categories p-3">
+                        <a href="{{ route('category4.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-plug" style="font-size:40px"></i> </div>
+                            <div><span>Smart Sockets</span></div>
+                        </a>
+                    </div>
+
+                    <div class="categories p-3">
+                        <a href="{{ route('category5.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-gear" style="font-size:40px"></i> </div>
+                            <div><span>Smart bolds</span></div>
+                        </a>
+                    </div>
+
+                    <div class="categories p-3">
+                        <a href="{{ route('category6.show') }}" style="text-align: center; color: #36454F">
+                            <div><i class="fa fa-gamepad" style="font-size:40px"></i> </div>
+                            <div><span>Smart remote controls</span></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

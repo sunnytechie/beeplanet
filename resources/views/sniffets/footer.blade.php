@@ -6,9 +6,9 @@
                 <div class="instagram-inner">
                     <div class="instagram-text">
                         <h3>Follow our instagram</h3>
-                        <p>@aviwp.studio</p>
+                        <p>@BeeSmartPlanet</p>
                     </div>
-                    <div class="instagram-grids clearfix">
+                    {{-- <div class="instagram-grids clearfix">
                         <div class="grid">
                             <a href="#"><img src="assets/images/instagram/1.jpg" alt></a>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="grid">
                             <a href="#"><img src="assets/images/instagram/6.jpg" alt></a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -45,9 +45,11 @@
                    <div class="inner">
                         <h3>Sign Up Now & Get 10% Off</h3>
                         <p>Get timely updates from your favorite products</p>
-                        <form>          
+                        <form method="post" action="{{ route('store.email') }}">    
+                            @csrf
+
                             <div class="input-1">
-                                <input type="email" class="form-control" placeholder="Email Address *" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address *" required>
                             </div>
                             <div class="submit clearfix">
                                 <button type="submit">Subcribe</button>
@@ -61,7 +63,8 @@
                     <h3>Contact info</h3>
                     <ul>
                         <li>Phone: 888-999-000-1425</li>
-                        <li>Email: azedw@mail.com</li>
+                        <li>Email: Info@beeplanet.tech,
+                            Sales@beeplanet.tech</li>
                         <li>Address: 22/1 natinoal city austria, dreem land, Huwai</li>
                     </ul>
                 </div>
@@ -114,7 +117,14 @@
                                 <li><a href="#">Privacy </a></li>
                                 <li><a href="#">Terms</a></li>
                                 <li><a href="#">Promo T&amp;Cs Apply</a></li>
-                                <li><a href="#">Admin</a></li>
+                                @guest
+                                    @else
+                                    @if (Auth::user()->user_type == 1)
+                                    <li><a href="{{ route('product.index') }}">Admin</a></li>
+                                @endif
+                                @endguest
+                                
+                                
                             </ul>
                         </div>
                     </div>

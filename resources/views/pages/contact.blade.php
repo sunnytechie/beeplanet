@@ -55,24 +55,52 @@
     
                             <div class="contact-form-col">
                                 <h2>Let’s talk to us</h2>
+                                @if (session()->has('status'))
+                                    <div class="alert alert-primary" role="alert">
+                                        <span>Message sent successfully</span>
+                                    </div>
+                                    @endif
                                 <div class="contact-form">
-                                    <form method="post" class="contact-validation-active" id="contact-form-main">
+                                    <form method="post" action="{{ route('store.contact') }}" class="contact-validation-active" id="contact-form-main">
+                                        @csrf
+
                                         <div>
-                                            <input type="text" name="name" id="name" placeholder="Name*">
+                                            <input type="text" class="@error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" id="name" placeholder="Name*">
+                                            @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div>
-                                            <input type="email" name="email" id="email" placeholder="Email*">
+                                            <input type="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" id="email" placeholder="Email*">
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
+
                                         <div class="fullwidth">
-                                            <select name="subject">
+                                            <select name="subject" class="@error('subject') is-invalid @enderror" value="{{ old('subject') }}">
                                                 <option disabled="disabled" selected>Contact subject</option>
-                                                <option>Subject 1</option>
-                                                <option>Subject 2</option>
-                                                <option>Subject 3</option>
+                                                <option>Purchase</option>
+                                                <option>Complaint</option>
+                                                <option>Others</option>
                                             </select>
+                                            @error('subject')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="fullwidth">
-                                            <textarea name="note"  id="note" placeholder="Case Description..."></textarea>
+                                            <textarea name="complaint"  id="complaint" class="@error('complaint') is-invalid @enderror" value="{{ old('complaint') }}" placeholder="Case Description..."></textarea>
+                                            @error('complaint')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="submit-area">
                                             <button type="submit" class="theme-btn">Submit It Now</button>

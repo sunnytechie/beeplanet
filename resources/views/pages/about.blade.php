@@ -36,7 +36,7 @@
                                     <a href="#" class="theme-btn-s3">Contact us</a>
                                 </div>
                                 <div class="img-holder">
-                                    <img src="assets/images/about.jpg" alt>
+                                    <img src="{{ asset('assets/images/bee/about.jpg') }}" alt>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
     
     
             <!-- start testimonials-section -->
-            <section class="testimonials-section">
+            <section class="testimonials-section" style="background-image: url('{{ asset('assets/images/bee/about2.jpg') }}')">
                 <div class="container-1410">
                     <div class="row">
                         <div class="col col-xs-12">
@@ -100,7 +100,7 @@
     
     
             <!-- start blog-section -->
-            <section class="blog-section section-padding">
+            {{-- <section class="blog-section section-padding">
                 <div class="container-1410">
                     <div class="row">
                         <div class="col col-xs-12">
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             <!-- end blog-section -->
 
 @endsection
