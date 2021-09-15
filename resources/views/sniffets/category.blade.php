@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center stop-d-flex">
                     <div class="categories p-3">
                         <a href="{{ route('category1.show') }}" style="text-align: center; color: #36454F">
                             <div><i class="fa fa-toggle-on" style="font-size:40px"></i> </div>

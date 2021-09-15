@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/bee/beelogo.png') }}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{-- CLoudflare icons --}}
@@ -35,6 +35,16 @@
     <link href="{{ asset('assets/css/owl.transitions.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/jquery.fancybox.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    {{-- Custom css --}}
+    <style>
+        @media screen and (max-width: 426px) {
+            .stop-d-flex {
+                    display: inline-block !important;
+                    text-align: center;
+                    width: 100%;
+                }
+        }
+    </style>
 
     <link rel="stylesheet" href="{{ asset('assets/css/customstyle.css') }}" rel="stylesheet">
 </head>
